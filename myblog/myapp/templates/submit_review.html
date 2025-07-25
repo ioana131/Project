@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,
+initial-scale=1.0">
+<title>Submit Review</title>
+</head>
+<body>
+<h1>Submit a Review</h1>
+{% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/submit.css' %}"> 
+
+<form method="post">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Submit Review</button>
+</form>
+<a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>

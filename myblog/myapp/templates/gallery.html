@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Gallery</title>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/galleryc.css' %}">
+<script src="{% static 'js/gallery.js' %}"></script>
+</head>
+<body>
+  <nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Gallery</label>
+    <ul>
+      <li><a class="active" href="{% url 'home' %}">Home</a></li>
+      <li><a href="{% url 'about' %}">About</a></li>
+      <li><a href="{% url 'form' %}">Form</a></li>
+      <li><a href="{% url 'project' %}">Menu Page</a></li>
+
+  
+    </ul>
+  </nav>
+    
+<div class="slider">
+<div class="slides">
+  <div class="slide"><img src="{% static 'images/8a656d7a-b48a-4c7f-83ff-e308bb8cf02d.jpg' %}" alt="..."></div>
+    <div class="slide"><img src="{% static 'images/download (3).jpg' %}" alt="..."></div>
+      <div class="slide"><img src="{% static 'images/pink lillies.jpg' %}" alt="..."></div>
+      <div class="slide"><img src="{% static 'images/download (4).jpg' %}" alt="..."></div>
+      <div class="slide"><img src="{% static 'images/67b0a73a-87ec-484d-9c09-2d60e139ebdf.jpg' %}" alt="..."></div>
+</div>
+<button class="prev" onclick="prevSlide()">&#10094;</button>
+<button class="next" onclick="nextSlide()">&#10095;</button>
+</div>
+<section></section>
+<div id="chatbot-icon">
+  <a href="{% url 'chatbot' %}">Chatbot</a>  </div>
+
+<div id="chatbot-container" class="chat-container">
+  <div id="chat-container"></div>
+  <form id="chat-form">
+    <input type="text" id="user-input" placeholder="Answer Here..." />
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<script src="chatbot.js"></script>
+
+
+</body>
+</html>

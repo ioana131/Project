@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+  background: linear-gradient(45deg, rgb(255, 155, 205), pink, mistyrose);
+  animation: shakeBackground 4s infinite alternate;
+  color: #800040;
+  text-align: center;
+  padding: 50px;
+}
+
+h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px #ffccff;
+    animation: none !important;
+}
+
+p {
+  font-size: 1.5rem;
+  margin: 20px;
+  background-color: #ffe6f2;
+  border: 3px dashed rgb(248, 161, 207);
+  padding: 15px;
+  animation: pulseText 2s infinite;
+}
+
+form button {
+  background-color: pink;
+  color: black;
+  font-size: 1.2rem;
+  border: 4px double rgb(191, 146, 191);
+  padding: 10px 20px;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+}
+
+form button:hover {
+  background-color: hotpink;
+  color: white;
+  transform: scale(1.1) rotate(5deg);
+}
+
+a {
+  display: block;
+  margin-top: 20px;
+  color: rgb(64, 0, 64);
+  text-decoration: underline wavy;
+  font-weight: bold;
+  font-size: 1.1rem;
+  animation: floatLink 3s infinite ease-in-out;
+}
+
+
+@keyframes pulseText {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shakeBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: 100% 100%; }
+}
+
+@keyframes floatLink {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}

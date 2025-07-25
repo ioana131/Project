@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .container {
+      width: 50%;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      color: #2c3e50;
+    }
+
+    header p {
+      margin: 0;
+      font-size: 20px;
+      color: #7f8c8d;
+    }
+
+    .section-title {
+      font-size: 22px;
+      color: #34495e;
+      border-bottom: 2px solid #2c3e50;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .content {
+      margin-left: 20px;
+    }
+
+    .list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .list li {
+      margin-bottom: 10px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 14px;
+      color: #7f8c8d;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>About me</h1>
+    </header>
+
+    <!-- Objective Section -->
+    <div class="section">
+      <div class="section-title">Short descriprion</div>
+      <div class="content">
+        <table>
+            <tr>
+            <td><img src="images/WhatsApp Image 2025-03-02 at 23.11.26.jpeg" width=150" height="200" alt="Your Name"></td>
+            <td><p>     My name is Roxana-Ioana Hanas and I am a student in the first year of West University of Timisoara.</p> 
+            <p>         I study Computer Science in English.</p>
+            <p>         I love to say that I am communicative and sociable and I enjoy working in teams. I also love meeting new people and making friends.</p>
+            </td>
+            </tr>
+            </table>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+<div class="section">
+    <div class="section-title">Contact</div>
+    <div class="content">
+      <ul class="list">
+        <li>Email: roxana.hanas06@e-uvt.com
+        </li>
+        <li>Phone: (123) 456-7890</li>
+      </ul>
+    </div>
+  </div>
+
+    <!-- Experience Section -->
+    <div class="section">
+      <div class="section-title">Experience</div>
+      <div class="content">
+        <ul class="list">
+          <li><strong>Student</strong></li>        
+        </ul>
+      </div>
+    </div>
+
+    <!-- Education Section -->
+    <div class="section">
+      <div class="section-title">Education</div>
+      <div class="content">
+        <ul class="list">
+          <li><strong></strong>Studied at "Iancu de Hunedoara" National College on the Mathematics and Informatics profile. 2020-2024
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+<!-- Accomplishments Section -->
+<div class="section">
+    <div class="section-title">Accomplishments</div>
+    <div class="content">
+      <ul class="list">
+        <li>In 11th grade I received the mention diploma when I participated in the English olympiad.</li>
+<li>I went to a competition for the Erasmus program and I managed to get into it and go to Lisbon-Portugal for two weeks.</li>
+<li>I have been a scout for 6 years in which I did a lot of volunteering.</li>
+      </ul>
+    </div>
+  </div>
+    <!-- Skills Section -->
+    <div class="section">
+      <div class="section-title">Skills</div>
+      <div class="content">
+        <ul class="list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>C++</li>
+          <li>C</li>
+          <li>Problem Solving and Analytical Skills</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      <p>© 2025 Roxana Ioana Hanas</p>
+    </div>
+  </div>
+
+</body>
+</html>

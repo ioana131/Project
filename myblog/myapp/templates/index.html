@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ioana's Blog</title>
+  {% load static %}
+  <link rel="stylesheet" type="text/css" href="{% static 'css/index1.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/Menu.css'%}">
+  <script src="{% static 'js/index_backtotop.js' %}"></script>
+  <script src="{% static 'js/index_searchposts.js' %}"></script>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet' />
+</head>
+<body>
+
+
+<div class="sidebar">
+  <div class="top"></div>
+  <div class="logo">
+    <i class="bx bxl-codepen"></i>
+    <span>Ioana's Blog</span>
+  </div>
+  <i class="bx bx-menu" id="btn"></i>
+  <div class="user">
+    <img src="{% static 'images/WhatsApp Image 2025-03-02 at 23.11.26.jpeg' %}" alt="me" class="user-img" />
+    <div>
+      <p class="bold">Hanas Ioana</p>
+      <p>Admin</p>
+    </div>
+  </div>
+  <ul>
+    <li>
+      <a href="{% url 'chatbot' %}"><i class="bx bxs-grid-alt"></i><span class="nav-item">Chatbot</span></a>
+      <span class="tooltip">Chatbot</span>
+    </li>
+    <li>
+      <a href="{% url 'home' %}"><i class='bx bxs-home-alt-2'></i><span class="nav-item">Home</span></a>
+      <span class="tooltip">Home</span>
+    </li>
+    <li>
+      <a href="{% url 'about' %}"><i class='bx bxl-instagram-alt'></i><span class="nav-item">About</span></a>
+      <span class="tooltip">About</span>
+    </li>
+    <li>
+      <a href="{% url 'gallery' %}"><i class='bx bxs-photo-album'></i><span class="nav-item">Gallery</span></a>
+      <span class="tooltip">Gallery</span>
+    </li>
+    <li>
+      <a href="{% url 'form' %}"><i class='bx bx-pencil'></i><span class="nav-item">Form</span></a>
+      <span class="tooltip">Form</span>
+    </li>
+    <li>
+      <a href="#"><i class="bx bx-cog"></i><span class="nav-item">Settings</span></a>
+      <span class="tooltip">Settings</span>
+    </li>
+    <li>
+      <a href="#"><i class="bx bx-log-out"></i><span class="nav-item">Logout</span></a>
+      <span class="tooltip">Logout</span>
+    </li>
+  </ul>
+</div>
+
+
+<div class="main-content">
+  <header>
+    <h1>Welcome to Ioana's Blog</h1>
+  </header>
+
+  <main>
+    <!-- Add page return button -->
+<button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top">Back to
+  Top </button>
+    <p>In 11th grade, I went to Lisbon, Portugal, with the Erasmus program. I decided to create some posts regarding some of the tourist attractions I visited and provide some details about them.</p>
+  <!-- search Div -->
+<div id="searchContainer">
+  <input type="text" id="searchInput" placeholder="Search...">
+  <button id="searchButton" onclick="searchPosts()">Search</button>
+  </div>
+  {% block content %}
+  {% for post in posts %}
+    <article>
+      <h2 class="...">{{ post.title }}</h2>
+      <p id="...">Posted on {{ post.post_date }}</p>
+      <img src="{{ post.image.url }}" alt="..." class="...">
+      <p>{{ post.paragraph }}</p>
+    </article>
+  {% endfor %}
+
+
+</section>
+
+    <section>
+      <article class="post">
+      <h2 class="post-title">Oceanarium</h2>
+      <h3>By Ioana, Posted on 20.11.2023</h3>
+      <table>
+        <tr>
+          <td><img src="{% static 'images/WhatsApp Image 2025-03-02 at 15.47.48.jpeg' %}" alt="Oceanarium Image 1" /></td>
+          <td><img src="{% static 'images/WhatsApp Image 2025-03-02 at 15.47.48 (3).jpeg' %}" alt="Oceanarium Image 2" /></td>
+        </tr>
+        <tr>
+          <td><img src="{% static 'images/WhatsApp Image 2025-03-02 at 15.47.48 (4).jpeg' %}" alt="Oceanarium Image 3" /></td>
+          <td><img src="{% static 'images/WhatsApp Image 2025-03-02 at 17.12.28.jpeg' %}" alt="Oceanarium Image 4" /></td>
+        </tr>
+      </table>
+      <p>The Lisbon Oceanarium is an oceanarium in Lisbon, Portugal. It is located in the Parque das Nações, which was the exhibition grounds for the Expo '98. It is one of the largest indoor aquariums in Europe and approximately 1 million people visit each year.</p>
+      <p>The Lisbon Oceanarium has a large collection of marine species, including penguins, seagulls, sea otters, sharks, rays, chimaeras, seahorses, and many others.</p>
+  
+      <div class="experience-section">
+        <h3>My Experience</h3>
+        <p>Oceanarium was the first tourist attraction I went to during my Erasmus stay in Lisbon. It was such a wonderful experience to see all the exotic animals and plants. I took some pictures there, and the guide provided a lot of information about the species. It was truly amazing to see the diversity of animals!</p>
+      </div>
+      </article>
+      </section>
+      <section>
+        <article class="post">
+        <h2 class="post-title">Benfica Stadium </h2>
+<h3>By Ioana, Posted on 21.11.2023</h3>
+<table>
+  <tr>
+    <td><img src="{% static 'images/WhatsApp Image 2025-03-02 at 17.12.51.jpeg' %}" width="500" height="600" /></td>
+    <td><img src="{% static 'images/WhatsApp Image 2025-03-02 at 15.44.43 (1).jpeg' %}" width="500" height="600" /></td>
+  </tr>
+</table>
+<p>The Estádio da Luz, officially named Estádio do Sport Lisboa e Benfica, is a multi-purpose stadium located in Lisbon, Portugal. It is used mostly for association football matches, hosting the home games of Portuguese club Benfica, its owner.</p>
+<p>Opened on 25 October 2003 with an exhibition match between Benfica and Uruguayan club Nacional, it replaced the original Estádio da Luz, which had 120,000 seats. The seating capacity of the new stadium is currently set at 64,642.The stadium was designed by HOK Sport Venue Event (now Populous) and had a construction cost of €162 million.</p>
+<div class="experience-section">
+<h3>My experience</h3>
+<p>I was truly amazed by how huge this stadium was. I did not expect that. I was constantly thinking how cool it would have been to go watch a football match there. I consider it would have been a new extraordinary experience. </p>
+</div>
+</article>
+</section>
+
+<section>
+  <article class="post">
+    <h2 class="post-title"> Quinta da Regaleira </h2>
+<h3>By Ioana, Posted on 22.11.2023</h3>
+<table>
+  <tr>
+    <td><img src="{% static 'images/WhatsApp Image 2025-03-02 at 15.44.44 (2).jpeg' %}" width="500" height="600" /></td>
+    <td><img src="{% static 'images/WhatsApp Image 2025-03-02 at 17.13.28.jpeg' %}" width="500" height="600" /></td>
+  </tr>
+  <tr>
+    <td><img src="{% static 'images/WhatsApp Image 2025-03-02 at 18.00.18.jpeg' %}" width="500" height="600" /></td>
+    <td><img src="{% static 'images/WhatsApp Image 2025-03-02 at 17.59.55.jpeg' %}" width="500" height="600" /></td>
+  </tr>
+</table>
+<p>Quinta da Regaleira is a quinta (manor house) located near the historic centre of Sintra, Portugal. It is classified as a World Heritage Site by UNESCO within the "Cultural Landscape of Sintra". Along with the other palaces in the area such as the Quinta do Relógio, Pena, Monserrate and Seteais palaces, it is considered one of the principal tourist attractions of Sintra.</p>
+<p>The property consists of a Romantic palace and chapel, and a luxurious park that features lakes, grottoes, wells, benches, fountains, and a vast array of exquisite constructions. The palace is also known as "The Palace of Monteiro the Millionaire", which is based on the nickname of its best known former owner, António Augusto Carvalho Monteiro. The palace was designed by the Italian architect Luigi Manini.</p>
+<div class="experience-section">
+<h3>My experience</h3>
+<p>We mostly walked around this tourist attraction and enjoyed our time in the nature.  </p>
+</div>
+</article>
+</section>
+
+<section>
+  <article class="post">
+    <h2 class="post-title"> Belém Tower </h2>
+<h3>By Ioana, Posted on 25.11.2023</h3>
+<table>
+  <tr>
+    <td><img src="{% static 'images/WhatsApp Image 2025-03-02 at 15.44.44 (3).jpeg' %}" width="500" height="600" /></td>
+    <td><img src="{% static 'images/WhatsApp Image 2025-03-02 at 18.15.29.jpeg' %}" width="500" height="600" /></td>
+  </tr>
+</table>
+<p>Belém Tower, officially the Tower of Saint Vincent (Portuguese: Torre de São Vicente) is a 16th-century fortification located in Lisbon that served as a point of embarkation and disembarkation for Portuguese explorers and as a ceremonial gateway to Lisbon. This tower symbolizes Portugal's maritime and colonial power in early modern Europe. It was built during the height of the Portuguese Renaissance, and is a prominent example of the Portuguese Manueline style, but it also incorporates other architectural styles, such as the minarets, which are inspired by Moorish architecture. The structure was built from lioz limestone and is composed of a bastion and a 30-metre (100 ft), four-storey tower.</p>
+<p>Since 1983, the tower has been a UNESCO World Heritage Site, along with the Jerónimos Monastery. It is often portrayed as a symbol of Europe's Age of Discoveries and as a metonym for Portugal or Lisbon, given its landmark status. It has incorrectly been stated that the tower was built in the middle of the Tagus and now sits near the shore because the river was redirected after the 1755 Lisbon earthquake. In fact, the tower was built on a small island in the Tagus river near the Lisbon shore.</p>
+
+<div class="experience-section">
+<h3>My experience</h3>
+<p>I think I was the most excited for this one probably because of its distinct architecture. Belem Tower, in my opinion, is extremely beautiful. The experience was even better because we were on a boat and we could admire it from the distance.</p>
+</div>
+</article>
+</section>
+
+<section>
+  <article class="post">
+    <h2 class="post-ttile">Beaches </h2>
+<h3>By Ioana, Posted on 27.11.2023</h3>
+<table>
+  <tr>
+    <td><img src="{% static 'images/WhatsApp Image 2025-03-02 at 15.44.44 (4).jpeg' %}" width="500" height="600" /></td>
+    <td><img src="{% static 'images/WhatsApp Image 2025-03-02 at 15.44.45.jpeg' %}" width="500" height="600" /></td>
+  </tr>
+  <tr>
+    <td><img src="{% static 'images/WhatsApp Image 2025-03-02 at 18.14.23.jpeg' %}" width="500" height="600" /></td>
+    <td><img src="{% static 'images/WhatsApp Image 2025-03-02 at 18.16.11.jpeg' %}" width="500" height="600" /></td>
+  </tr>
+</table>
+<p>If you love having a huge choice of activities and attractions at your disposal, Lisbon Coast breaks are the ideal match. The idyllic region of Central Portugal covers kilometres of beautiful beaches, dozens of fascinating coastal resorts and several incredible areas of natural beauty. </p>
+<div class="experience-section">
+<h3> My experience </h3>
+<p>I had a lot of fun when we went to see the beaches from Lisbon. Unfortunately, we could not go swimming because we went there in November and it was not warm. Yet, we could do some fun activities. For instance we played volleyball together, watched the sunset and take some amazing and aesthetic photos.</p>
+</div>
+</article>
+{% endblock %}
+
+<section>
+<h2>Reviews</h2>
+<ul>
+{% for review in reviews %}
+<li>
+<p><strong>{{ review.email }}</strong> ({{ review.date }})</p>
+<p>Rating: {{ review.rating }}</p>
+<p>{{ review.comment }}</p>
+<a href="{% url 'update_review' review.id %}">Update</a>
+<a href="{% url 'delete_review' review.id %}">Delete</a>
+</li>
+{% endfor %}
+</ul>
+<a href="{% url 'submit_review' %}">Leave a Review</a>
+
+    </section>
+    <nav>
+      <a href="{% url 'about' %}">About me</a>
+      <a href="{% url 'project' %}">Previous</a>
+      <a href="{% url 'form' %}">Form</a>
+      <a href="{% url 'gallery' %}">Gallery</a>
+      {% for post in posts %}
+  <a href="{% url 'post_detail' post.id %}">{{ post.title }}</a>
+{% endfor %}
+
+    </nav>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Ioana Roxana Hanas - Blog</p>
+  </footer>
+
+  <div id="chatbot-icon">
+    <a href="{% url 'chatbot' %}">Chatbot </a>
+    </div>
+
+<div id="chatbot-container" class="chat-container">
+    <div id="chat-container"></div>
+    <form id="chat-form">
+      <input type="text" id="user-input" placeholder="Answer Here..." />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
+
+
+<script>
+  let btn = document.querySelector('#btn');
+  let sidebar = document.querySelector('.sidebar');
+
+  btn.onclick = function () {
+    sidebar.classList.toggle('active');
+  };
+</script>
+
+<script src="chatbot.js"></script>
+</body>
+</html>

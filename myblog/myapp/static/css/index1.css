@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+    margin: 0;
+}
+
+
+h1, h2, h3, p {
+    margin-bottom: 15px;
+}
+
+
+header {
+    background: linear-gradient(135deg, #441010, #eed2f0);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 40px 20px;
+    animation: scaleAnimation 2s infinite alternate;
+
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    opacity:0;
+    transform: translateY(-30px);
+    animation: fadeInSlide 1.5s ease-out forwards;
+}
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+p {
+    font-size: 1.1rem;
+    color: #454343;
+    margin-bottom: 20px;
+}
+
+.post {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+}
+
+td img {
+    max-width: 100%; 
+    width: 200px;  
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    object-fit: cover; 
+    animation: slideIn 1s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+td img:hover
+{
+        transform: scale(1.01);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+      }
+
+.text {
+    flex: 2;
+}
+
+.text p {
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+
+.experience-section {
+    margin-top: 30px;
+    padding: 25px;
+    background-color: #f4d0d0;  
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.experience-section h3 {
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.experience-section p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+
+nav {
+    text-align: center;
+    margin-top: 40px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #7a98a8;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    margin: 0 15px;
+    border: 2px solid black;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background-color: gray;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(255, 226, 226);
+    color: white;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+#chatbot-icon {
+    position: fixed;
+    bottom: 70px;
+    right: 20px;
+    background-color: #d586a2;
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#chatbot-icon img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#chatbot-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 350px;
+    height: 400px;
+    background-color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    display: none;
+    flex-direction: column;
+}
+
+#chatbot-container.open {
+    display: flex;
+}
+
+#chat-container {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+#chat-form {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+#user-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgb(165, 93, 144);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    border-radius:50%}
+    #scrollToTopBtn:hover {
+    background-color: black;
+    }
+
+    #searchContainer {
+        text-align: center;
+        margin-bottom: 20px;
+        }
+        #searchInput {
+        margin-bottom: 10px;
+        padding: 5px;
+        border: 1px solid black;
+        border-radius: 5px;
+        }
+        #searchButton {
+        padding: 5px 10px;
+        background-color: black;
+        color: rgb(202, 115, 115);
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+        #searchButton:hover {
+        background-color: rgb(100, 0, 105);
+        }
+
+
+
+        
+/* === Reviews Section Styling === */
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #a94467;
+  border-bottom: 2px solid #f4c2c2;
+  padding-bottom: 10px;
+}
+
+section ul {
+  list-style-type: none;
+  padding: 0;
+  display: grid;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Review Card */
+section ul li {
+  background-color: #fff0f5;
+  border: 1px solid #f4c2c2;
+  border-left: 8px solid #ff69b4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInReview 0.6s ease-in-out;
+}
+
+section ul li:hover {
+  transform: translateY(-5px);
+  box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Review Text */
+section ul li p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  color: #333;
+}
+
+section ul li strong {
+  color: #cc3366;
+}
+
+/* Action Links */
+section ul li a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: #a94467;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+section ul li a:hover {
+  color: #e60073;
+}
+
+/* Review Button */
+section > a {
+  display: inline-block;
+  margin: 30px auto 0;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #ffc0cb;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+section > a:hover {
+  background-color: #ff69b4;
+}
+
+/* Animation */
+@keyframes fadeInReview {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
