@@ -1,9 +1,11 @@
-Upload all these files on Visual Studio Code. 
+Steps for opening the web pages:
 
-Open a terminal.
+1. Upload all these files on Visual Studio Code. 
 
-Write the command: cd myblog
+2. Open a terminal.
 
-Then, write the command: python manage.py runserver
+3. Write the command: cd myblog
 
-A link with the final project should be provided. (the link should look like this: http://127.0.0.1:8000/ )
+4. Then, write the command: python manage.py runserver
+
+5. A link with the final project should be provided. (the link should look like this: http://127.0.0.1:8000/ )
